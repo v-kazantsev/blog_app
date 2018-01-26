@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  layout 'blog'
+  #layout 'blog', only: [:index]
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   # GET /blogs
@@ -57,7 +57,7 @@ class BlogsController < ApplicationController
   def destroy
     @blog.destroy
     respond_to do |format|
-      format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.' }
+      format.html { redirect_to blogs_url, notice: 'Blog was successfully deleted.' }
 
     end
   end
