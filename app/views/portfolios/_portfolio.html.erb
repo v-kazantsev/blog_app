@@ -1,0 +1,23 @@
+  <!-- <td>
+    <%= link_to portfolio.title, portfolio_path(portfolio) %><br>
+    <%= portfolio.subtitle %><br>
+    <%= image_tag portfolio.thumb_img unless portfolio.thumb_img.nil? %>
+  </td> -->
+  <div class="col-md-4">
+    <div class="card mb-4 box-shadow">
+      <%= image_tag portfolio.thumb_img, class: "card-img-top" %>
+      <div class="card-body">
+        <p class="card-text"><%= portfolio.title %></p><p><%= portfolio.subtitle %></p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <%= link_to 'View', portfolio_path(portfolio), class: "btn btn-sm btn-outline-secondary" %>
+            <%= link_to 'Edit', edit_portfolio_path(portfolio), class: "btn btn-sm btn-outline-secondary" %>
+            <%= link_to 'Delete', portfolio_path(portfolio), action: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-sm btn-outline-secondary" %>
+          </div>
+          <small class="text-muted">
+            <%= time_ago_in_words(portfolio.created_at) %>
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
