@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card-group" id="panel-352784">
+				<div class="card">
+					<div class="card-header">
+
+            <%= link_to memo.title, "#panel-element-710237#{memo.id}", class: "card-title collapsed", "data-toggle": "collapse", "data-parent": "#panel-352784" %>
+						 <!-- <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-352784" href="#panel-element-710237">
+               <%= memo.title %></a> -->
+
+					</div>
+					<div id="panel-element-710237<%= "#{memo.id}" %>" class="panel-collapse collapse">
+						<div class="card-block">
+							<%= memo.body %>
+              <%= render partial: 'memo_links', locals: { memo: memo} %>
+						</div>
+					</div>
+				</div>
+			</div><br>
+		</div>
+	</div>
+</div>

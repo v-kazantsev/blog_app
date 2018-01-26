@@ -21,3 +21,9 @@ end
     thumb_img: "http://via.placeholder.com/350x200"
   )
 end
+10.times do |m|
+  Memo.create!(
+    title: "#{m+1} How-to",
+    body: "Cras eget arcu pulvinar turpis posuere eleifend a quis tellus. Pellentesque euismod non enim eu aliquet. Duis ultrices sed arcu ac faucibus. Nulla malesuada lorem mauris, a placerat lacus laoreet ultricies. Quisque vel mattis elit. Maecenas condimentum vel enim et fringilla. Pellentesque pellentesque, enim eu imperdiet pharetra, metus eros auctor diam, a ullamcorper magna turpis malesuada ipsum. Integer ut dictum magna. Pellentesque ac est nibh. Aliquam nec pretium orci. Mauris porttitor tortor tellus. Donec dapibus faucibus luctus. Morbi ligula mauris, sodales sit amet dapibus eget, malesuada ut lorem. Nam eget tristique arcu."
+  )
+end
