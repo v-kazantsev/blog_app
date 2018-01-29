@@ -1,7 +1,7 @@
 class Portfolio < ApplicationRecord
   include Placeholder
   after_initialize :set_defaults
-  vlaidates_presence_of :title, :subtitle, :body
+  validates_presence_of :title, :subtitle, :body
 
   def set_defaults
     self.main_img ||= Placeholder.generate_image(width: 600, height: 400)

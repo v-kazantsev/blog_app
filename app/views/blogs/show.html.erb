@@ -1,5 +1,15 @@
-<h2><%= "#{@blog.title}" %></h2>
-<p id="notice"><%= notice %></p>
-<div><%= @blog.body %></div><br>
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+<link rel="stylesheet" href="/assets/blog.scss">
+    <h2 class="blog-post-title"><%= @blog.title %></h2>
+    <p class="blog-post-meta">
+      <%= time_ago_in_words(@blog.created_at) %> ago
+    </p>
+    <p>
+      <%= @blog.source %>
+    </p>
+    <hr>
+    <%= @blog.body %>
+    <p>
+    <nav class="blog-pagination">
+    <%= link_to 'Назад', blogs_path, class: "btn btn-outline-primary" %>
+    </nav>
+  </p>

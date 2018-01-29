@@ -1,26 +1,8 @@
-<h1>Blogs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.source %></td>
-        <td><%= blog.body %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Blog', new_blog_path %>
+<link rel="stylesheet" href="/assets/blog.scss">
+<%= render @blogs %>
+<p>
+<nav class="blog-pagination">
+  <%= link_to_next_page @blogs, 'Ранее', class: "btn btn-outline-primary" %>
+  <%= link_to_prev_page @blogs, 'Позднее', class: "btn btn-outline-primary" %>
+</nav>
+</p>

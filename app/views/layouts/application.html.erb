@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BlogApp</title>
+    <title>Блог и портфолио</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="container">
+  <body>
+    <%= render 'shared/nav_bar' %>
+    <main role="main">
+      <div class="container">
     <%= yield %>
+  </div>
+</div>
+    <footer class="footer bg-dark">
+      <%= render 'shared/footer', location: 'bottom'%>
+    </footer>
   </body>
 </html>

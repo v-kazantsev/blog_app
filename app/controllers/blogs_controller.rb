@@ -1,11 +1,11 @@
 class BlogsController < ApplicationController
-  #layout 'blog', only: [:index]
+  layout 'blog', only: [:index, :show]
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = Blog.page(params[:page])
   end
 
   # GET /blogs/1

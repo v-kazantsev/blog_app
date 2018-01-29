@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  root to: 'blogs#index'
+  root to: 'page#about'
+  get 'page/about'
+  get 'page/contact'
   resources :portfolios
-  resources :skills
+  resources :skills, except: [:show]
   resources :memos
   resources :blogs
 end

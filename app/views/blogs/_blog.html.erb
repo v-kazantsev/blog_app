@@ -1,0 +1,8 @@
+<link rel="stylesheet" href="/assets/blog.scss">
+
+    <h2 class="blog-post-title"><%= blog.title %></h2>
+    <p class="blog-post-meta"><%= time_ago_in_words(blog.created_at) %> ago</p>
+    <p><%= blog.source %></p>
+    <hr>
+    <%= truncate(blog.body, length: 300) { link_to 'Читать дальше', blog_path(blog)} %>
+  

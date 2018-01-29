@@ -6,23 +6,18 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="/assets/memos.scss">
-    <title>Заметки</title>
+    <title>Обо мне</title>
   </head>
-
-  <body>
+  <body class="home">
     <%= render 'shared/nav_bar' %>
-
-    <main role="main" class="container">
-
-      <%= render @memos %>
-      <%= link_to 'Создать заметку', new_memo_path %>
-    </main>
-
+    <div id="background"></div>
+    <div class="cover-container d-flex justify-content-center h-100 p-3 mx-auto flex-column">
+      <main role="main" class="inner cover">
+        <%= yield %>
+      </main>
+    </div>
     <footer class="footer bg-dark">
-        <%= render 'shared/footer' %>
+      <%= render 'shared/footer' %>
     </footer>
-
-
   </body>
 </html>

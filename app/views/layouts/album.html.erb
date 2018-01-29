@@ -6,37 +6,21 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-    <title>Portfolio</title>
+    <title>Портфолио</title>
   </head>
-
   <body>
-
-
+    <%= render 'shared/nav_bar' %>
     <main role="main">
-
-
-
-      <div class="album py-5 bg-light">
+      <div class="album py-5">
         <div class="container">
-
           <div class="row">
             <%= render @portfolios %>
-
           </div>
         </div>
       </div>
-
     </main>
-
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-      </div>
+    <footer class="footer bg-dark">
+      <%= render 'shared/footer' %>
     </footer>
-
-
   </body>
 </html>
