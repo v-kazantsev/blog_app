@@ -1,5 +1,7 @@
 {
   "name": "blog_app",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "swiper": "^4.1.0"
+  }
 }
